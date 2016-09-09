@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+  <head>
+   <link href="https://fonts.googleapis.com/css?family=Coming+Soon" rel="stylesheet"> 
+  </head> 
+
+  <div class = title> Insert Funny Title Here</div>
+  
+  <div class  = subtitle>
+ 
+    click this guy for a cute cat video to brighten up your day
+  
+  </div>
+  
+  
+  
+  <button  onclick="openVideo();" type="submit" style="border: 0; background: transparent">
+   <img src="waffles.png" width="300" height="300" alt="submit" />
+</button> 
+  
+<div class = arrow>
+    <img src="http://bioinformatica.upf.edu/20152016/projectes1516/3A/flecha.png" width="100" height="100"/>
+  </div>
+  
+    <div class = "description">
+      <p>this guy here is named Waffles</p>
+      <p>he likes hair ties and bottle caps</p>
+      <p>watching him always cheers me up</p>
+      <p>so I hope a cat video</p>
+      can cheer you up too
+  </div>
+    <footer>
+      <p>Thanks for using this! This is just a fun idea I had during the depths of the night. If you want to add a cat video to the stock:  <button style = left:0% type="button" onclick="promptInput();">Click Me!</button> </p>
+  
+  </footer> 
+
+</html> 
+
+<style>
+.title{
+  font-size: 4em;
+  text-align:center;
+  font-weight:300;
+}
+
+.subtitle{
+  margin-top:3%;
+  font-size: 1.5em;
+  text-align:center;
+}
+html{
+    font-family: 'Coming Soon', cursive;
+    color:white;
+}
+
+.arrow{
+  position:relative;
+  left:50%;
+}
+
+.description{
+  position:relative;
+  left:35%;
+  top:-220px;
+  font-size:1.2em;
+}
+
+
+button{
+  position:relative;
+  margin-top:5%;
+  left:50%;
+}
+
+body  {
+    background-image: url("https://pixabay.com/static/uploads/photo/2016/02/03/08/32/banner-1176676_960_720.jpg");
+}
+
+footer{
+  text-align:center;
+}
+</style>
+<script>
+var possibleVideos = ["www.youtube.com/embed/tntOCGkgt98", "www.youtube.com/embed/njSyHmcEdkw", "www.youtube.com/embed/G8KpPw303PY"];
+
+openVideo = function() {
+  var randomIndex = Math.floor((Math.random() * possibleVideos.length))
+
+  var link = "https://" + possibleVideos[randomIndex];
+  window.open(link);
+};
+
+function promptInput() {
+  var newVideo = prompt("Enter the link of a cat video! It should be an embedded link and remove the https:// before entering the link. Thanks! ");
+  if (newVideo != null) {
+    possibleVideos.push(newVideo);
+  }
+}
+</script>
